@@ -27,16 +27,12 @@ public class FileReader {
             parsedData.put(parts[0].trim(), parts[1].trim());
         }
 
-        Profile profile = new Profile(
+        return new Profile(
                 parsedData.get("Name"),
                 Integer.parseInt(parsedData.get("Age")),
                 parsedData.get("Email"),
                 Long.parseLong(parsedData.get("Phone"))
         );
-
-        System.out.println(profile);
-
-        return profile;
 
     }
 }
